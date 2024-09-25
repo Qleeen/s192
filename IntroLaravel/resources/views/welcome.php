@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite('resources/js/app.js')
-    <title>Document</title>
+    <!-- @vite('resources/js/app.js') -->
+    <title>Inicio</title>
 </head>
 <body>
-    <h1>Hola mundo introlaravel</h1>
+    <h1>Inicio welcome</h1>
 
     
 </body>
