@@ -3,14 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-Route::view('/', 'welcome');
-
-
-Route:: view('/form','Formulario');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -22,6 +15,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Ruta de tipo GET
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
+// Ruta de tipo vista
+Route::view('/', 'inicio')->name('rutainicio');
+
+Route::view('/formulario', 'formulario')->name('rutaform');
+
+Route::view('/clientes', 'clientes')->name('rutaclientes');
 
 require __DIR__.'/auth.php';
