@@ -3,10 +3,6 @@
 @section('titulo', 'Formulario')  
 @section('contenido')
 
-  {{-- Inicia tarjeta con formulario --}}
-
-
-
   <div class="container mt-5 col-md-6">
 
     <div class="card font-monospace">
