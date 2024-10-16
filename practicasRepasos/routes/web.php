@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+// use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\controladorVista1;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,8 +18,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-route::view('/portada', 'portada')->name('rutaportada');
 
-route::view('/vista1', 'vista1')->name('rutavista1');
+
+
+// route::view('/portada', 'portada')->name('rutaportada');
+
+// route::view('/vista1', 'vista1')->name('rutavista1');
+
+
+Route::get ('/vista1', [controladorVista1::class, 'vista1'])->name('rutavista1');
+
+Route::get ('/portada', [controladorVista1::class, 'portada'])->name('rutaportada');
+
+
 
 require __DIR__.'/auth.php';

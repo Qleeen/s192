@@ -20,8 +20,8 @@
         }
         header {
             text-align: center;
-            background-color: #0073e6;
-            color: white;
+            background-color: #3b4058;
+            color: #2a6e78;
             padding: 20px;
             width: 100%;
         }
@@ -42,7 +42,7 @@
         .buttons a {
             text-decoration: none;
             color: white;
-            background-color: #0073e6;
+            background-color: #7a907c;
             padding: 10px 20px;
             border-radius: 5px;
             margin: 0 10px;
@@ -62,7 +62,7 @@
         <p>Este es el repaso 1 de la materia.</p>
     </div>
     <div class="buttons">
-        <a href="/vista1">REPASO1</a>
+        <a href="{{route('rutavista1')}}">REPASO1</a>
     </div>
 </body>
 </html>
