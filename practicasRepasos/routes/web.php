@@ -27,7 +27,7 @@ Route::middleware('auth')->group(function () {
 
 
 Route::get ('/vista1', [controladorVista1::class, 'vista1'])->name('rutavista1');
-
+Route::post('/calculadora', [controladorVista1::class, 'calculadora'])->name('rutaconvertir');
 Route::get ('/portada', [controladorVista1::class, 'portada'])->name('rutaportada');
 
 
