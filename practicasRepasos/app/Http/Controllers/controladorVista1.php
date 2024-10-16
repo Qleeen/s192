@@ -13,7 +13,7 @@ class controladorVista1 extends Controller
 
     
     }
-
+    // creamos la funcion para hacer las conversiones
     public function calculadora(Request $request){
         $cantidad = $request->input('cantidad');
         $conversion = $request->input('conversion');
@@ -37,7 +37,7 @@ class controladorVista1 extends Controller
                 $resultado = 'Conversión no válida.';
         }
 
- 
+        
         return view('vista1', ['resultado' => $resultado]);
     }
     
