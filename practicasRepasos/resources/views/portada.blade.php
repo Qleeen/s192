@@ -9,7 +9,7 @@
     <!-- uso de cdn  -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
-<body class="d-flex flex-column justify-content-center align-items-center vh-10 bg-light">
+<body class="d-flex flex-column justify-content-center align-items-center vh-10 bg-warning">
 
     <header class="bg-dark text-center text-white py-100 w-100">
         <h1>Programación Web</h1>

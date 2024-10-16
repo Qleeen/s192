@@ -13,6 +13,8 @@
 
     <div class="text-center my-4">
         <a href="{{ route('rutaportada') }}" class="btn btn-secondary">Portada</a>
+
+        
     </div>   
 </body>
 </html>
