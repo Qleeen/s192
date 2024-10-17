@@ -8,17 +8,19 @@
     </head>
 <body class='bg-warning'>
 
-    <header class="bg-black text-center text-white py-101 w-101">
-    
+    <header class="bg-dark text-center text-white">
+        <div class="mt-10">
+            <h1>Calculadora de unidades</h1>
+        </div>
     </header>
 
     <div class="container text-center my-4">
-        <h1 class="mt-4">Calculadora de unidades</h1>
+    
         <form action="/calculadora" method="POST">
             @csrf
             <br>
             <div class="text-center">
-                <label for="cantidad">Cantidad:</label>
+                <label for="cantidad">Ingrese una cantidad:</label>
                 <input type="number" name="cantidad" id="cantidad" required>
             </div>
             <br>
@@ -36,9 +38,11 @@
         </form>
 
 
-        <!-- lo que hace esta funcion es ver si en resultado hay valores dentro -->
+        <!-- lo que hace esta funcion es ver si en el resultado hay valores dentro -->
         @if(isset($resultado))
         <br>
+
+        <!-- si si hay valor entonces nos da el resultado -->
             <h5>El resultado de <strong>{{ $resultado }}</strong></h5>
 
         <!-- finaliza el if -->

@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controladorVista1;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('portada');
 });
 
 Route::get('/dashboard', function () {

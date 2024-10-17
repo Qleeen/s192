@@ -22,19 +22,19 @@ class controladorVista1 extends Controller
      
         switch ($conversion) {
             case 'mb_gb':
-                $resultado = $cantidad . ' MB es igual a ' . $cantidad / 1000 . ' GB';
+                $resultado = $cantidad . ' MB es igual a ' . $cantidad / 1024 . ' GB';
                 break;
             case 'gb_mb':
-                $resultado = $cantidad . ' GB es igual a ' . $cantidad * 1000 . ' MB';
+                $resultado = $cantidad . ' GB es igual a ' . $cantidad * 1024 . ' MB';
                 break;
             case 'gb_tb':
-                $resultado = $cantidad . ' GB es igual a ' . $cantidad / 1000 . ' TB';
+                $resultado = $cantidad . ' GB es igual a ' . $cantidad / 1024 . ' TB';
                 break;
             case 'tb_gb':
-                $resultado = $cantidad . ' TB es igual a ' . $cantidad * 1000 . ' GB';
+                $resultado = $cantidad . ' TB es igual a ' . $cantidad * 1024 . ' GB';
                 break;
             default:
-                $resultado = 'Conversión no válida.';
+                $resultado = 'Vuelve a llenar los campos.';
         }
 
         

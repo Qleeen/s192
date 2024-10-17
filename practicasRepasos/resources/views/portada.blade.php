@@ -6,8 +6,7 @@
 
     @vite(['resources/js/app.js'])
     <title>Portada</title>
-    <!-- uso de cdn  -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
 </head>
 <body class="d-flex flex-column justify-content-center align-items-center vh-10 bg-warning">
 
@@ -16,17 +15,19 @@
     </header>
 
     <div class="container text-center my-4">
-        <p class="h2">Hector Baruch Ortiz Quintana</p>
-        <p class="h5">Este es el repaso 1 de la materia</p>
-        <p class="h4">S192</p>
         <img src="{{ asset('imagenes/logo.svg') }}" alt="Logo de la materia" width="400">
+        <br>
+        </br>
+        <p class="h2">Hector Baruch Ortiz Quintana</p>
+        <p class="h3">Repaso 1 Laravel</p>
+        <p class="h4">S192</p>
+        
     </div>
 
     <div class="text-center my-4">
-        <a href="{{ route('rutavista1') }}" class="btn btn-secondary">REPASO1</a>
+        <a href="{{ route('rutavista1') }}" class="btn btn-secondary">REPASO 1</a>
     </div>
-    <!-- bootstrap js para el uso de componentes dianmicos -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>   -->
+
 </body>
 </html>
 
