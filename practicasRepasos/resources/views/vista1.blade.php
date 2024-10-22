@@ -30,7 +30,7 @@
                     <option value="mb_gb">MB a GB</option>
                     <option value="gb_mb">GB a MB</option>
                     <option value="gb_tb">GB a TB</option>
-                    <option value="tb_gb">TB a GB</option>
+                    <option value="tb_gb ">TB a GB</option>
                 </select>
             </div class="text-center">
             <br>
