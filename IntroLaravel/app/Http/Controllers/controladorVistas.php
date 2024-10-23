@@ -23,16 +23,18 @@ class controladorVistas extends Controller
     // }
 
     public function procesarClientes(Request $peticion){
-        // devuelve lo que contiene la
+        //repsuestas de redirección usando el nombre de la ruta
+        // return redirect()->route('rutaclientes');
 
-        //ruta donde se hizo la peticion
-        //return $peticion->path();
+        //redireccion de origen 
+        // return back();
 
-        //devuelve la url completa de la peticion
-        //return $peticion->url();
-        
-        //nos devuelve la ip del local host
-        //return $peticion->ip();
+        //redireccion con valores en session
+        $usuario= $peticion->input('txtnombre');
+
+        session()->flash('exito','se guardo el usuario'.$usuario);
+        return to_route('rutaform');
+
 
         
 
