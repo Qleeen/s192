@@ -23,22 +23,23 @@ class controladorVistas extends Controller
     // }
 
     public function procesarClientes(Request $peticion){
-        //repsuestas de redirección usando el nombre de la ruta
-        // return redirect()->route('rutaclientes');
 
-        //redireccion de origen 
-        // return back();
+        $validated=$peticion->validate([
+
+            'txtnombre'=>'required|min:4|max:25',
+            'txtapellido'=>'required|min:4|max:25',
+            'txtcorreo'=>'required|email:rfc,dns',
+            'txttelefono'=>'required|numeric',
+         ]);
+
+
+
 
         //redireccion con valores en session
         $usuario= $peticion->input('txtnombre');
 
         session()->flash('exito','se guardo el usuario'.$usuario);
         return to_route('rutaform');
-
-
-        
-
-
 
     }
 }

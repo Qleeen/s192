@@ -26,18 +26,22 @@
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre: </label>
             <input type="text" class="form-control" name="txtnombre">
+            <small class="first-italic text-danger">{{ $errors->first('txtnombre') }}</small>
           </div>
           <div class="mb-3">
             <label for="apellido" class="form-label">Apellido: </label>
             <input type="text" class="form-control" name="txtapellido">
+            <small class="first-italic text-danger">{{ $errors->first('txtapellido') }}</small>
           </div>
           <div class="mb-3">
             <label for="correo" class="form-label">Correos: </label>
-            <input type="text" class="form-control" name="txtcorreo">
+            <input type="mail" class="form-control" name="txtcorreo">
+            <small class="first-italic text-danger">{{ $errors->first('txtcorreo') }}</small>
           </div>
           <div class="mb-3">
             <label for="telefono" class="form-label">Teléfono: </label>
-            <input type="text" class="form-control" name="txttelefono">
+            <input type="number" class="form-control" name="txttelefono">
+            <small class="first-italic text-danger">{{ $errors->first('txttelefono') }}</small>
           </div>
 
       </div>
