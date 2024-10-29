@@ -15,7 +15,7 @@
     </header>
 
     <div class="container text-center my-4">
-        <img src="{{ asset('imagenes/logo.svg') }}" alt="Logo de la materia" width="400">
+        <img src="{{ asset('imagenes/logo.svg') }}" alt="Login" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
         <br>
         </br>
         <p class="h2">Hector Baruch Ortiz Quintana</p>
