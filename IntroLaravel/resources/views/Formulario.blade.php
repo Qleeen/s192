@@ -27,24 +27,24 @@
     <div class="card font-monospace">
 
       <div class="card-header fs-5 text-center text-primary">
-        Registro de Clientes
+        {{__('Registro Clientes')}}
       </div>
 
       <div class="card-body text-justify">
         <form action="/enviarCliente" method="POST">
           @csrf
           <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre: </label>
+            <label for="nombre" class="form-label">{{__('Nombre')}}: </label>
             <input type="text" class="form-control" name="txtnombre" value="{{ old('txtnombre') }}">
             <small class="first-italic text-danger">{{ $errors->first('txtnombre') }}</small>
           </div>
           <div class="mb-3">
-            <label for="apellido" class="form-label">Apellido: </label>
+            <label for="apellido" class="form-label">{{__('Apellidos')}}: </label>
             <input type="text" class="form-control" name="txtapellido" value="{{ old('txtapellido') }}">
             <small class="first-italic text-danger">{{ $errors->first('txtapellido') }}</small>
           </div>
           <div class="mb-3">
-            <label for="correo" class="form-label">Correos: </label>
+            <label for="correo" class="form-label">{{__('Correos')}}: </label>
             <input type="mail" class="form-control" name="txtcorreo" value="{{ old('txtcorreo') }}">
             <small class="first-italic text-danger">{{ $errors->first('txtcorreo') }}</small>
           </div>
@@ -58,7 +58,7 @@
       <div class="card-footer text-muted> class=">
 
         <div class="d-grip gap-2 mt-2 mb-1">
-          <button type="submit" class="btn btn-success btn-sm">Guardar cliente</button>
+          <button type="submit" class="btn btn-success btn-sm">{{__('Guardar Clientes')}}</button>
         </div>
       </form>
       </div>
