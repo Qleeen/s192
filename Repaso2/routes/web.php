@@ -1,20 +1,12 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\rutaVistas;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// route::view('/', 'inicio')->name('rutainicio');
+// route::view('/registrolibro', 'registrolibro')->name('rutaregistro');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get ('/', [rutaVistas::class, 'inicio'])->name('rutainicio');
+Route::get ('/registroLibro', [rutaVistas::class, 'registroLibro'])->name('rutaregistro');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 
-require __DIR__.'/auth.php';
