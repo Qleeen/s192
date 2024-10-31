@@ -8,5 +8,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get ('/', [rutaVistas::class, 'inicio'])->name('rutainicio');
 Route::get ('/registroLibro', [rutaVistas::class, 'registroLibro'])->name('rutaregistro');
+Route::post('/registrarLibro', [rutaVistas::class, 'registroLibro'])->name('registrarLibro');
 
 

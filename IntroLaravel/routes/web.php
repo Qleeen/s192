@@ -18,6 +18,8 @@ Route::post('/enviarCliente', [controladorVistas::class, 'procesarClientes'])->n
 
 
 
+
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
