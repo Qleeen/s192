@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Request\validadorLibros;
+use App\Http\Requests\validadorClientes;
 
 use Illuminate\Http\Request;
 
@@ -16,12 +16,15 @@ class rutaVistas extends Controller
         return view('registroLibro');
     }
 
-    public function registro(validadorLibros $peticion)
-    {
+    public function procesarLibros(validadorCLientes $peticionValidada){
 
-        $usuario= $peticion->input('txtisbn');
-        session()->flash('exito', 'Se guardo el libro con isbn' .$usuario);
-        return redirect()->route('rutaregistro');
+
+
+        //redireccion con valores en session
+        $usuario= $peticionValidada->input('txtisbn');
+
+        session()->flash('exito','se guardo el usuario'.$usuario);
+        return to_route('rutaregistro');
 
     }
 
