@@ -16,7 +16,7 @@
     @endif
 
 
-    <h2 class="mb-4">Registrar Nuevo Libro</h2>
+    <h2 class="mb-4">{{__('Registrar Nuevo Libro')}}</h2>
     <form action="/enviarLibro" method="POST">
         @csrf
         <div class="mb-3">
@@ -25,36 +25,36 @@
             <small class="first-italic text-danger">{{ $errors->first('txtisbn') }}</small>
         </div>
         <div class="mb-3">
-            <label for="titulo" class="form-label">Título</label>
+            <label for="titulo" class="form-label">{{__('Titulo')}}</label>
             <input type="text" class="form-control" name="txttitulo" value="{{ old('txttitulo') }}">
             <small class="first-italic text-danger">{{ $errors->first('txttitulo') }}</small>
         </div>
         <div class="mb-3">
-            <label for="autor" class="form-label">Autor</label>
+            <label for="autor" class="form-label">{{__('Autor')}}</label>
             <input type="text" class="form-control" name="txtautor" value="{{ old('txtautor') }}">
             <small class="first-italic text-danger">{{ $errors->first('txtautor') }}</small>
         </div>
         <div class="mb-3">
-            <label for="paginas" class="form-label">Páginas</label>
+            <label for="paginas" class="form-label">{{__('Paginas')}}</label>
             <input type="number" class="form-control" name="txtpaginas" value="{{ old('txtpaginas') }}">
             <small class="first-italic text-danger">{{ $errors->first('txtpaginas') }}</small>
         </div>
         <div class="mb-3">
-            <label for="anio" class="form-label">Año</label>
+            <label for="anio" class="form-label">{{__('Año')}}</label>
             <input type="number" class="form-control" name="txtanio" value="{{ old('txtanio') }}">
             <small class="first-italic text-danger">{{ $errors->first('txtanio') }}</small>
         </div>
         <div class="mb-3">
-            <label for="editorial" class="form-label">Editorial</label>
+            <label for="editorial" class="form-label">{{__('Editorial')}}</label>
             <input type="text" class="form-control" name="txteditorial" value="{{ old('txteditorial') }}">
             <small class="first-italic text-danger">{{ $errors->first('txteditorial') }}</small>
         </div>
         <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
+            <label for="email" class="form-label">{{__('Email')}}</label>
             <input type="email" class="form-control" name="txtemail" value="{{ old('txtemail') }}">
             <small class="first-italic text-danger">{{ $errors->first('txtemail') }}</small>
         </div>
-        <button type="submit" class="btn btn-danger">Registrar Libro</button>
+        <button type="submit" class="btn btn-danger">{{__('Registrar Libro')}}</button>
     </form>
 </div>
 
