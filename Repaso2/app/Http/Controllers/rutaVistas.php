@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Request\validadorLibros;
 
 use Illuminate\Http\Request;
+
 
 class rutaVistas extends Controller
 {
@@ -14,7 +16,7 @@ class rutaVistas extends Controller
         return view('registroLibro');
     }
 
-    public function registro(Request $peticion)
+    public function registro(validadorLibros $peticion)
     {
 
         $usuario= $peticion->input('txtisbn');
@@ -23,19 +25,5 @@ class rutaVistas extends Controller
 
     }
 
-    public function procesarLibro(Request $peticion){
 
-        $validated=$peticion->validate([
-
-            'txtisbn' => 'required|min:13',
-            'txttitulo' => 'required|string|max:150',
-            'txtautor' => 'required|min:3',
-            'txtpaginas' => 'required|integer|min:2',
-            'txtanio' => 'required|integer|digits:4|between:1000,$currentYear"',
-            'txteditorial' => 'required|',
-            'txtemail' => 'required|email:rfc,dns',
-      
-
-        ]);
-    }
 }
