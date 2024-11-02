@@ -21,7 +21,7 @@ class rutaVistas extends Controller
 
 
         //redireccion con valores en session
-        $usuario= $peticionValidada->input('txtisbn');
+        $usuario= $peticionValidada->input('txttitulo');
 
         session()->flash('exito','se guardo el usuario'.$usuario);
         return to_route('rutaregistro');
