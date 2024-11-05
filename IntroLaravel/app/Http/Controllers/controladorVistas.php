@@ -30,7 +30,7 @@ class controladorVistas extends Controller
         //redireccion con valores en session
         $usuario= $peticionValidada->input('txtnombre');
 
-        session()->flash('exito','se guardo el usuario'.$usuario);
+        session()->flash('exito','se guardo el usuario' .$usuario);
         return to_route('rutaform');
 
     }
