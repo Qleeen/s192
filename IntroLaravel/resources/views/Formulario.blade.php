@@ -31,7 +31,7 @@
       </div>
 
       <div class="card-body text-justify">
-        <form action="/enviarCliente" method="POST">
+        <form action="{{ route('enviaCliente') }}" method="POST">
           @csrf
           <div class="mb-3">
             <label for="nombre" class="form-label">{{__('Nombre')}}: </label>
