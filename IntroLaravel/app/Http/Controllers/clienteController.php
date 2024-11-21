@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use carbon\Carbon;
+use Carbon\Carbon;
 use App\Http\Requests\validadorClientes;
 
 class clienteController extends Controller
@@ -43,7 +43,7 @@ class clienteController extends Controller
 
         $usuario = $request->input('txtnombre');
 
-        session()->flash('exito','se guardo el usuario' .$usuario);
+        session()->flash('exito', $usuario);
         return to_route('rutaform');
     }
 
@@ -98,6 +98,8 @@ class clienteController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB::table('clientes')->where('id', $id)->delete();
+        session()->flash('exito','Se elimino el usuario');
+        return to_route('rutaclientes');
     }
 }

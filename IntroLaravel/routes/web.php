@@ -27,7 +27,7 @@ route::post('/cliente',[clienteController::class, 'store'])->name('enviaCliente'
 
 
 
-
+Route::delete('/cliente/{id}', [clienteController::class, 'destroy'])->name('rutaEliminarCliente');
 
 
 

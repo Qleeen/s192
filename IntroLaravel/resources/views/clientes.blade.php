@@ -41,11 +41,12 @@
         <!-- {{-- <a href="{{route('rutaActualizarCliente', $cliente->id)}}" class="btn btn-warning btn-sm" type="submit">{{__('Actualizar')}}</a> --}} -->
         <a href="{{ route('rutaeditaCliente', ['id' =>$cliente->id])}}" type="submit" class="btn btn-warning btn-sm">{{__('Actualizar')}}</a>
         
-        <form action="{{ route('rutaeditaCliente', ['id' => $cliente->id]) }}" method="POST" class="d-inline">
+
+        <form action="{{route('rutaEliminarCliente', $cliente->id)}}" method="Post" style="display: inline-block;" onsubmit="return confirm('¿Seguro?');">          
           @csrf
           @method('DELETE')
-          <button type="submit" class="btn btn-danger btn-sm" onclick="confirmDrop">{{__('Eliminar')}}</button>
-        
+          <button type="submit" class="btn btn-danger btn-sm">{{__('Eliminar')}}</button>
+    </form>
 
       </div>
 
