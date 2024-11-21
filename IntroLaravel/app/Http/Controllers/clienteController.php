@@ -13,8 +13,10 @@ class clienteController extends Controller
      * Display a listing of the resource.
      */
     public function index()
+
     {
-        //
+        $ConsultarClientes = DB::table('clientes')->get();
+        return view('clientes', compact('ConsultarClientes'));
     }
 
     /**
@@ -56,9 +58,10 @@ class clienteController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+       $cliente = DB::table('clientes')->where('id', $id)->first();
+         return view('customerUpdate', compact('cliente'));
     }
 
     /**
@@ -66,7 +69,28 @@ class clienteController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'txtnombre' => 'required',
+            'txtapellido' => 'required',
+            'txtcorreo' => 'required',
+            'txttelefono' => 'required'
+        ]);
+
+        DB::table('clientes')
+        ->where('id', $id)
+        ->update([
+            'nombre' => $request->input('txtnombre'),
+            'apellido' => $request->input('txtapellido'),
+            'correo' => $request->input('txtcorreo'),
+            'telefono' => $request->input('txttelefono'),
+            'updated_at' => Carbon::now()
+ 
+        ]);
+        $usuario = $request->input('txtnombre');
+
+        session()->flash('exito','se actualizo el usuario' .$usuario);
+
+        return redirect()->route('rutaclientes')->with('exito', 'El cliente fue actualizado');
     }
 
     /**

@@ -9,7 +9,7 @@ Route::get('/', [controladorVistas::class, 'home'])->name('rutainicio');
 
 
 
-Route::get('/clientes', [controladorVistas::class, 'consulta'])->name('rutaclientes');
+Route::get('/clientes', [clienteController::class, 'index'])->name('rutaclientes');
 
 Route::view('/component', 'componentes')->name('componente');
 
@@ -17,11 +17,11 @@ Route::post('/enviarCliente', [controladorVistas::class, 'procesarClientes'])->n
 
 
 
-
 //controlador cliente
 
 Route::get('/cliente/create', [clienteController::class, 'create'])->name('rutaform');
-
+Route::get('/cliente/update/{id}', [clienteController::class, 'edit'])->name('rutaeditaCliente');
+Route::put('/cliente/{id}/update', [clienteController::class, 'update'])->name('rutaActualizarCliente');
 
 route::post('/cliente',[clienteController::class, 'store'])->name('enviaCliente');
 
