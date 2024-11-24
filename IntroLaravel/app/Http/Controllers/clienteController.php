@@ -69,12 +69,7 @@ class clienteController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $request->validate([
-            'txtnombre' => 'required',
-            'txtapellido' => 'required',
-            'txtcorreo' => 'required',
-            'txttelefono' => 'required'
-        ]);
+
 
         DB::table('clientes')
         ->where('id', $id)
