@@ -85,7 +85,7 @@ class clienteController extends Controller
 
         session()->flash('exito','se actualizo el usuario' .$usuario);
 
-        return redirect()->route('rutaclientes')->with('exito', 'El cliente fue actualizado');
+        return to_route('rutaclientes');
     }
 
     /**
